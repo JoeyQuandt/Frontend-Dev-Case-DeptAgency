@@ -1,0 +1,97 @@
+@import "../styles/styleguide.scss";
+
+.footer{
+    background: $light_black;
+    padding-inline: 2.25em;
+    .footerLinksWrapper{
+        display: flex;
+        justify-content: space-between;
+        .footerLinks{
+            display: flex;
+            gap: 3em;
+            padding-top: 2.8em;
+            flex-direction: column;
+            .navLogoWhite{
+                display: none;
+            }
+            a{
+                color: $white;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: $uppercase;
+            }
+        }
+        .footerSocials{
+            display: flex;
+            gap: 3em;
+            padding-top: 3.3em;
+            flex-direction: column;
+        }
+    }
+    .line{
+        background: $dark_gray;
+        padding: .05em;
+        width: 100%;
+        display: block;
+        margin-top: 5em;
+        margin-bottom: 2.8em;
+    }
+    .companyinfo{
+        display: flex;
+        flex-direction: column;
+        color: #808080;
+        font-family: "Arial",sans-serif;
+    }
+    .copyRight{
+        margin-top: 1.5em;
+        margin-bottom: 3.5em;
+    }
+}
+
+.topArrow{
+    display: none;
+}
+
+@media  screen and (min-width:40em) {
+    .footerSection{
+        display: flex;
+        width: 100%;
+        .footer{
+            width: 100%;
+            padding: 0 3em;
+            .footerLinksWrapper{
+                .footerLinks{
+                    flex-direction: row;
+                    align-items: center;
+                    .navLogoWhite{
+                        display: block;
+                    }
+                }
+                .footerSocials{
+                    display: none;
+                }
+    
+            }
+            .companyinfo{
+                padding-top: 2.8em;
+                padding-bottom: 5.6em;
+                padding-inline:  3.07em;
+                flex-direction: row;
+                justify-content: space-between;
+                .companyinfoCommerce{
+                    display: flex;
+                    gap: 2.25em;
+                }
+                .copyRight{
+                    margin: 0;
+                }
+            }
+        }
+        .topArrow{
+            display: block;
+            text-align: center;
+            padding: 7.5em 2.75em;
+            color: $purple;
+        }
+    }
+}
