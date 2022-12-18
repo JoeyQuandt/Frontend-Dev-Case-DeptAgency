@@ -1,0 +1,84 @@
+@import "../../styles/styleguide.scss";
+
+
+.FormSection{
+    padding: 3em 2.25em;
+    h2{
+        margin-bottom: 2.375em;
+        font-size: $header2;
+        font-weight: 400;
+        color: $black;
+        text-transform: uppercase;
+    }
+    form{
+        display: flex;
+        gap: 2.375em;
+        flex-direction: column;
+        .FormItem{
+            display: flex;
+            margin-top: 2em;
+            flex-direction: column;
+            label{
+                text-transform: uppercase;
+                font-size: $paragraph;
+            }
+            input{
+                margin-top: 2em;
+                border: 0;
+                outline: 0;
+                border-bottom: 1px solid $light_gray;
+            }
+            textarea{
+                margin-top: 6em;
+                resize: none;
+                border: 0;
+                outline: 0;
+                border-bottom: 1px solid $light_gray;
+            }
+        }
+        button{
+            background: transparent;
+            text-transform: uppercase;
+            border-radius: 50px;
+            font-size: $uppercase;
+            border: 1px solid #121212;
+            cursor: pointer;
+            text-align: center;
+            padding: 1em;
+            color: $black;
+            width: 100%;
+        }
+    }
+}
+
+@media  screen and (min-width:1024px) {
+    .FormSection{
+        padding: 3.6em;
+        display: flex;
+        align-items: center;
+        form{
+            .FormNameEmail{
+                display: flex;
+                gap:  2.375em;
+                width: 628px;
+                .FormItem{
+                    width: 100%;
+                }
+            }
+            .FormItem textarea{
+                max-width: 295px;
+            }
+            button{
+                max-width: 167px;
+            }
+
+        }
+        h2{
+            margin-top: -1em;
+            font-size: $header;
+            max-width: 240px;
+            margin-right: 4em;
+            line-height: 3em;
+        }
+    }
+}

@@ -26,6 +26,16 @@ export default function Navbar() {
     "contact",
   ];
 
+  const countriesLinks = [
+    "global",
+    "nederland",
+    "united states",
+    "ireland",
+    "united kingdom",
+    "deutschland",
+    "schweiz",
+  ];
+
   const LinkElements = Links.map((link) => {
     return (
       <Link href="/" key={Links.indexOf(link)}>
@@ -37,6 +47,14 @@ export default function Navbar() {
   const navElements = navLinks.map((link) => {
     return (
       <Link href="/" key={navLinks.indexOf(link)}>
+        {link}
+      </Link>
+    );
+  });
+
+  const countrieElements = countriesLinks.map((link) => {
+    return (
+      <Link href="/" key={countriesLinks.indexOf(link)}>
         {link}
       </Link>
     );
@@ -55,16 +73,16 @@ export default function Navbar() {
             priority
             src="/images/dept_logo_white.svg"
             alt="Logo"
-            width={75}
-            height={75}
+            width={88}
+            height={25}
           />
           <Image
             className={styles.navLogoBlack}
             priority
             src="/images/dept_logo_black.svg"
             alt="Logo"
-            width={75}
-            height={75}
+            width={52}
+            height={15}
           />
         </Link>
       </div>
@@ -94,8 +112,8 @@ export default function Navbar() {
                 priority
                 src="/images/dept_logo_white.svg"
                 alt="Logo"
-                width={75}
-                height={75}
+                width={88.04}
+                height={25}
               />
             </Link>
           </div>
@@ -103,7 +121,13 @@ export default function Navbar() {
             <Image src="/images/cross.svg" alt="cross" width={25} height={25} />
           </button>
         </div>
-        <div className={styles.menuLinks}>{LinkElements}</div>
+        <div className={styles.menuLinks}>
+          {LinkElements}
+          <div className={styles.countrieLinks}>
+            <h2>Landen</h2>
+            {countrieElements}
+          </div>
+        </div>
       </div>
     </nav>
   );

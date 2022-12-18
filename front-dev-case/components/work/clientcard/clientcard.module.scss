@@ -1,0 +1,122 @@
+@import "../../../styles/styleguide.scss";
+
+.Clientcard{
+    overflow: "hidden";
+    flex: 1 1 auto;
+    color: $white;
+    position: relative;
+    .ClientcardText{
+        padding: 0 1.5em;
+        position: absolute;
+        margin-bottom: 1.5em;
+        bottom: 0;
+        p{
+            text-transform: uppercase;
+            font-size: $uppercase;
+            margin-bottom: 1em;
+        }
+        h2{
+            font-size: $header2;
+            font-weight: 400;
+        }
+    }
+    img{
+        display: block;
+        width: 100%;
+        object-fit: cover;
+
+    }
+}
+
+
+.Readmore{
+    display: none;
+    font-size: $paragraph;
+    text-decoration: none;
+    color: $white;
+    gap: 0.75em;
+    align-items: center;
+    img{
+        min-height:15px;
+        width: 15px;
+    }
+}
+
+.ClientCardHighLight{
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+
+.ClientCardNote{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    width: 100%;
+    font-size: $paragraph;
+    background: $light_black;
+    color: $white;
+    padding: 1.5em 1.5em;
+    .ClientCardArticle:nth-child(3){
+        display: none;
+    }  
+    .ClientCardNoteLine{
+        display: block;
+        background: white;
+        width: 100%;
+        padding: 0.0625em;
+        margin-top: 2.25em;
+        margin-bottom: 1em;
+    }
+    h2{
+        font-size: $paragraph;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 0.75em;
+    }
+}
+
+
+
+/*Desktop*/
+@media  screen and (min-width:1024px) {
+    .Clientcard{
+        img{
+            object-fit: fill;
+            height: auto;
+        }
+        .ClientcardText{
+            padding-bottom: 2em;
+            padding-inline: 2em;
+            p{
+                font-size: $paragraph;
+            }
+            h2{
+                font-size: 3rem;
+                margin-bottom: 1em;
+            }
+        }
+    }
+    .ClientCardNote{
+        width: 100%;
+        padding: 3.75em 2em;
+        flex: 2;
+        .ClientCardArticle:nth-child(3){
+            display: block;
+        }  
+        h2{
+            font-size: $paragraph;
+        }
+        p{
+            font-size: $paragraph;
+            margin-bottom: 0.75em;
+        }
+    }
+    .Readmore{
+        display: flex;
+    }
+}

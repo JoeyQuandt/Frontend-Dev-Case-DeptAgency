@@ -1,0 +1,49 @@
+@import "../../styles/styleguide.scss";
+
+
+.hero{
+    background: url("../../public/images/hero-mobile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 515px;
+    .heroText{
+        width: 100%;
+        padding-top: 12.4em;
+        padding-inline: 1em;
+        padding-bottom: 1.375em;
+        p{
+            text-transform: uppercase;
+            color: $white;
+            font-size: $paragraph;
+            margin-bottom: 2em;
+
+        }
+        h1{
+            color: $white;
+            font-size: $header;
+            font-weight: 400;
+            line-height: 34px;
+        }
+    }
+}
+
+@media screen and (min-width:1024px){
+    .hero{
+        position: relative;
+        background: url("../../public/images/hero_desktop.png");
+        background-repeat: no-repeat;
+        min-height: 75vh;
+        background-size: cover;
+
+        .heroText{
+            position: absolute;
+            bottom: 0;
+            padding-bottom: 5em;
+            padding-left: 3.5em;
+            h1{
+                max-width: 560px;
+                font-size: $header;
+            }
+        }
+    }
+}

@@ -1,13 +1,18 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "@next/font/google";
-import styles from "../styles/Home.module.css";
 import Layout from "../components/layout";
+import Hero from "../components/hero/Hero";
+import Clients from "../components/clients/clients";
+import Form from "../components/form/Form";
+import Work from "../components/work/work";
 
 export default function Home() {
   return (
     <>
-      <Layout></Layout>
+      <Layout>
+        <Hero />
+        <Work />
+        <Clients />
+        <Form />
+      </Layout>
     </>
   );
 }

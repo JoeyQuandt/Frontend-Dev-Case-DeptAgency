@@ -1,0 +1,48 @@
+@import "../../styles/styleguide.scss";
+
+.Clients{
+    background: $light_black;
+    padding: 5.75em 2em;
+    .Clientstext{
+        margin-bottom: 2em;
+        h2{
+            font-size: $header;
+            font-weight: 400;
+            color: $white;
+            margin-bottom: 2em;
+        }
+        p{
+            color: $light_gray;
+            font-size: $uppercase;
+        }
+    }
+    .Clientsgrid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 127px;
+        grid-row-gap: 83px;
+        padding-bottom: 1.8em;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+@media  screen and (min-width:40em) {
+    .Clients{
+        padding: 5.75em 2.68em;
+        .Clientstext{
+            max-width: 1354px;
+        }
+        .Clientsgrid{
+            place-items: center;
+            grid-template-columns: repeat(3, 1fr);
+            padding-bottom: 5.75em;
+            padding-top: 4em;
+            img{
+                max-width: 170px;
+                max-height: 90px;
+            }
+        }
+    }
+}

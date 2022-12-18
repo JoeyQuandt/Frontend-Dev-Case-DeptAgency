@@ -1,0 +1,22 @@
+@import "../../styles/styleguide.scss";
+
+.Quote{
+    grid-column: 1 / -1;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 5.75em 2em;
+    min-height: 32.5vh;
+    color: $white;
+    background: $light_black;
+    h2{
+        font-weight: 400;
+        font-size: $header2;
+        margin-bottom: 2em;
+        line-height: 26px;
+    }
+    p{
+        text-transform: uppercase;
+        font-size: $uppercase;
+    }
+}

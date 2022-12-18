@@ -1,4 +1,4 @@
-@import "../styles/styleguide.scss";
+@import "../../styles/styleguide.scss";
 
 .footer{
     background: $light_black;
@@ -18,7 +18,7 @@
                 color: $white;
                 text-decoration: none;
                 text-transform: uppercase;
-                font-size: $uppercase;
+                font-size: $paragraph;
             }
         }
         .footerSocials{
@@ -52,7 +52,22 @@
     display: none;
 }
 
-@media  screen and (min-width:40em) {
+@media screen and (min-width:768px){
+    .footerSection{
+        .footer{
+            .footerLinksWrapper{
+                .footerLinks{
+                    flex-wrap: wrap;
+                    .navLogoWhite{
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media  screen and (min-width:1024px) {
     .footerSection{
         display: flex;
         width: 100%;
@@ -65,6 +80,7 @@
                     align-items: center;
                     .navLogoWhite{
                         display: block;
+                        margin-left: 3em;
                     }
                 }
                 .footerSocials{
@@ -75,7 +91,7 @@
             .companyinfo{
                 padding-top: 2.8em;
                 padding-bottom: 5.6em;
-                padding-inline:  3.07em;
+                padding-inline:  3em;
                 flex-direction: row;
                 justify-content: space-between;
                 .companyinfoCommerce{
@@ -88,9 +104,12 @@
             }
         }
         .topArrow{
-            display: block;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 7.5em 2.75em;
+            padding: 0 2.4em;
             color: $purple;
         }
     }

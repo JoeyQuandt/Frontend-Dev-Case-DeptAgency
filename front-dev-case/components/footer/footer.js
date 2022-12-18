@@ -5,9 +5,9 @@ import Link from "next/link";
 export default function Footer() {
   const navLinks = [
     "work",
-    "culture",
     "services",
-    "insights",
+    "stories",
+    "about",
     "careers",
     "contact",
   ];
