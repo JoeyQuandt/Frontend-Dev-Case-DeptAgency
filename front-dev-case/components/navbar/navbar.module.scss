@@ -17,9 +17,8 @@
     display: none;
     @include position(absolute, $top: 0, $left: 0, $bottom: 0);
     background: $light_black;
-    height: 100vh;
-    min-height:100vh;
-    min-height:-webkit-fill-available;
+    min-height: 100vh;
+    overflow-y:auto;
     width: 100%;
     .menuLogoClose{
         @include flex(row,space-between,center);
@@ -69,6 +68,15 @@
             }
         }
     }
+}
+.menuShow::-webkit-scrollbar{
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.menuShow::-webkit-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
 }
 
 /*Disable navbar desktop*/
