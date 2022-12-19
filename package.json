@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@radix-ui/react-popover": "1.0.2",
+    "react-viewport-height": "^1.2.1",
     "sass": "^1.56.2"
   }
 }

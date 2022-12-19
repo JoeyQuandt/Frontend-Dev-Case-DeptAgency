@@ -5,6 +5,7 @@ import React from "react";
 
 export default function Navbar() {
   const [menuShown, setMenuShow] = React.useState(false);
+  /*Links menu navbar*/
   const Links = [
     "home",
     "work",
@@ -16,7 +17,7 @@ export default function Navbar() {
     "events",
     "contact",
   ];
-
+  /*Links home navbar*/
   const navLinks = [
     "work",
     "culture",
@@ -25,7 +26,7 @@ export default function Navbar() {
     "careers",
     "contact",
   ];
-
+  /*Links countries*/
   const countriesLinks = [
     "global",
     "nederland",
@@ -36,29 +37,16 @@ export default function Navbar() {
     "schweiz",
   ];
 
-  const LinkElements = Links.map((link) => {
-    return (
-      <Link href="/" key={Links.indexOf(link)}>
-        {link}
-      </Link>
-    );
-  });
+  function MapLinks(links){
+    return links.map((link)=>{
+      return(
+        <Link href="/" key={links.indexOf(link)}>
+          {link}
+        </Link>
+      )
+    })
+  }
 
-  const navElements = navLinks.map((link) => {
-    return (
-      <Link href="/" key={navLinks.indexOf(link)}>
-        {link}
-      </Link>
-    );
-  });
-
-  const countrieElements = countriesLinks.map((link) => {
-    return (
-      <Link href="/" key={countriesLinks.indexOf(link)}>
-        {link}
-      </Link>
-    );
-  });
 
   function handleClick() {
     setMenuShow((prevMenuShow) => !prevMenuShow);
@@ -87,7 +75,7 @@ export default function Navbar() {
         </Link>
       </div>
       <div className={styles.navbarDesktop}>
-        <div className={styles.navbarLinks}>{navElements}</div>
+        <div className={styles.navbarLinks}>{MapLinks(navLinks)}</div>
         <button onClick={handleClick}>
           <Image
             priority
@@ -112,7 +100,7 @@ export default function Navbar() {
                 priority
                 src="/images/dept_logo_white.svg"
                 alt="Logo"
-                width={88.04}
+                width={88}
                 height={25}
               />
             </Link>
@@ -122,10 +110,10 @@ export default function Navbar() {
           </button>
         </div>
         <div className={styles.menuLinks}>
-          {LinkElements}
+        {MapLinks(Links)}
           <div className={styles.countrieLinks}>
             <h2>Landen</h2>
-            {countrieElements}
+            {MapLinks(countriesLinks)}
           </div>
         </div>
       </div>

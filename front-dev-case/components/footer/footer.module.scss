@@ -52,6 +52,7 @@
     display: none;
 }
 
+/*Tablet*/
 @media screen and (min-width:768px){
     .footerSection{
         .footer{
@@ -67,6 +68,7 @@
     }
 }
 
+/*Desktop*/
 @media  screen and (min-width:1024px) {
     .footerSection{
         display: flex;

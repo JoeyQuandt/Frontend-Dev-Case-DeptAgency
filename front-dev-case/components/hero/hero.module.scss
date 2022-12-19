@@ -3,19 +3,18 @@
 
 .hero{
     background: url("../../public/images/hero-mobile.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+    @include background(cover);
     min-height: 515px;
     .heroText{
         width: 100%;
         padding-top: 12.4em;
-        padding-inline: 1em;
-        padding-bottom: 1.375em;
+        padding-inline: em(15);
+        padding-bottom: em(39);
         p{
             text-transform: uppercase;
             color: $white;
             font-size: $paragraph;
-            margin-bottom: 2em;
+            margin-bottom: em(28);
 
         }
         h1{
@@ -27,19 +26,17 @@
     }
 }
 
+/*Desktop*/
 @media screen and (min-width:1024px){
     .hero{
         position: relative;
         background: url("../../public/images/hero_desktop.png");
-        background-repeat: no-repeat;
-        min-height: 75vh;
-        background-size: cover;
-
+        @include background(cover,center);
+        min-height: 628px;
         .heroText{
-            position: absolute;
-            bottom: 0;
-            padding-bottom: 5em;
-            padding-left: 3.5em;
+            @include position(absolute, $bottom: 0);
+            padding-bottom: em(109.63);
+            padding-left: em(56);
             h1{
                 max-width: 560px;
                 font-size: $header;

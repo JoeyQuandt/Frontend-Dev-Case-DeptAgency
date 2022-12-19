@@ -11,14 +11,6 @@ $red: #FF2929;
 $purple: #5115F7;
 
 /*Font sizes*/
-/*Desktop
-$header1: 3rem;
-$header2: 2.2rem;
-$paragraph: 1rem;
-$uppercase: 1.125rem;
-
-
-/*Mobile*/
 $header: 2.1rem;
 $header2: 1.6rem;
 $menu: 2.2rem;
@@ -26,3 +18,45 @@ $paragraph: 1rem;
 $uppercase: 1.125rem;
 $small: 0.8rem;
 $menu_desktop: 3.75rem;
+
+
+/*Mixin functions*/
+/*Em*/
+$browser-context: 16;
+
+@function em($pixels, $context: $browser-context) {
+    @return #{$pixels/$context}em;
+}
+/*Rem*/
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+  }
+  
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+/*Flex*/
+@mixin flex($direction,$justify,$align:null) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+/*Position*/
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+  }
+
+/*Background Image*/
+@mixin background($size,$position:null){
+    background-size: $size;
+    background-repeat: no-repeat;
+    background-position: $position;
+}

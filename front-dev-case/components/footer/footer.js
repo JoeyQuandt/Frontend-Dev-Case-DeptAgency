@@ -12,6 +12,7 @@ export default function Footer() {
     "contact",
   ];
 
+
   const navElements = navLinks.map((link) => {
     return (
       <Link href="/" key={navLinks.indexOf(link)}>

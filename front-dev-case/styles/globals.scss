@@ -1,3 +1,6 @@
+@import "./styleguide.scss";
+
+
 *{
   box-sizing: border-box;
   margin: 0;
@@ -6,4 +9,25 @@
 
 body{
   font-family: "Lato",sans-serif;
+}
+
+h1{
+  font-size: $header;
+}
+
+h2{
+  font-size: $header2;
+}
+
+p,a,li,button{
+  list-style: none;
+  text-decoration: none;
+  font-size: $paragraph;
+}
+
+button{
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none;
+  background: transparent;
 }
