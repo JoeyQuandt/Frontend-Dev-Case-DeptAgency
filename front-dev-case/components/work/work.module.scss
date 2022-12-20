@@ -28,6 +28,7 @@
 /*Desktop*/
 @media  screen  and (min-width:1024px) {
     .workSelection{
+      flex-direction: row-reverse;
       padding: 2em;
       background: $white;
       font-size: $header2;
@@ -40,6 +41,7 @@
     .workGrid{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        background: $light_gray;
         select{
           font-size: $header2;
         }

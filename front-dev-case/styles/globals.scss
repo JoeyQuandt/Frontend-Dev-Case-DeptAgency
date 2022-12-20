@@ -1,4 +1,8 @@
 @import "./styleguide.scss";
+@font-face {
+  font-family: 'MaisonNeue';
+  src: url('../public/fonts/MaisonNeueTRIAL-Book.otf') format('woff2');
+}
 
 
 *{
@@ -12,7 +16,7 @@ html{
 }
 
 body{
-  font-family: "Lato",sans-serif;
+  font-family: "MaisonNeue",sans-serif;
 }
 
 h1{

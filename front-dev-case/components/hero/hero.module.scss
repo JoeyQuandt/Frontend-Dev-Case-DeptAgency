@@ -5,11 +5,11 @@
     background: url("../../public/images/hero-mobile.png");
     @include background(cover);
     min-height: 515px;
+    position: relative;
     .heroText{
+        @include position(absolute, $bottom: 5em);
         width: 100%;
-        padding-top: 12.4em;
         padding-inline: em(15);
-        padding-bottom: em(39);
         p{
             text-transform: uppercase;
             color: $white;
@@ -29,10 +29,9 @@
 /*Desktop*/
 @media screen and (min-width:1024px){
     .hero{
-        position: relative;
         background: url("../../public/images/hero_desktop.png");
         @include background(cover,center);
-        min-height: 628px;
+        min-height: 728px;
         .heroText{
             @include position(absolute, $bottom: 0);
             padding-bottom: em(109.63);

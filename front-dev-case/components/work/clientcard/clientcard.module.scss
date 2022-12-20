@@ -1,7 +1,6 @@
 @import "../../../styles/styleguide.scss";
 
 .Clientcard{
-    overflow: "hidden";
     flex: 1 1 auto;
     color: $white;
     position: relative;
@@ -23,8 +22,9 @@
     img{
         display: block;
         width: 100%;
+        height: auto;
         object-fit: cover;
-
+        min-height: 485px;
     }
 }
 
@@ -52,11 +52,10 @@
 
 
 .ClientCardNote{
-    display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     gap: 1em;
-    width: 100%;
     font-size: $paragraph;
     background: $light_black;
     color: $white;
@@ -101,10 +100,16 @@
             }
         }
     }
+    .ClientCardHighLight{
+        .Clientcard{
+            img{
+                object-fit: cover;
+            }
+        }
+    }
     .ClientCardNote{
         width: 100%;
         padding: 3.75em 2em;
-        flex: 2;
         .ClientCardArticle:nth-child(3){
             display: block;
         }  
@@ -118,5 +123,12 @@
     }
     .Readmore{
         display: flex;
+    }
+}
+
+/*Desktop*/
+@media  screen and (min-width:1280px) {
+    .ClientCardNote{
+        max-width: 476px;
     }
 }

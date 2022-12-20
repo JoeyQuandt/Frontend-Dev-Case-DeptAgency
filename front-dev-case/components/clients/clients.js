@@ -19,17 +19,7 @@ export default function Clients() {
 
   const CompaniesImages = Companies.map((company) => {
     const logo = `/images/companies/${company}.svg`;
-    return (
-      <Image
-        className={styles.companyLogo}
-        priority
-        src={logo}
-        alt="Logo"
-        width={190}
-        height={90}
-        key={Companies.indexOf(company)}
-      />
-    );
+    return <img className={styles.companyLogo} src={logo} alt="Logo" />;
   });
 
   return (

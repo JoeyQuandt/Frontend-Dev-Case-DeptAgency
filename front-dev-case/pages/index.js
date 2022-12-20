@@ -3,13 +3,47 @@ import Hero from "../components/hero/Hero";
 import Clients from "../components/clients/clients";
 import Form from "../components/form/Form";
 import Work from "../components/work/work";
+import { GraphQLClient, gql } from "graphql-request";
 
-export default function Home() {
+const graphcms = new GraphQLClient(
+  "https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clburw2h12zem01t9gdxkagam/master"
+);
+
+const QUERY = gql`
+  {
+    works(first: 20) {
+      highlight
+      id
+      thumbnail {
+        url
+      }
+      subject
+      tagline
+      highlights {
+        title
+        description
+      }
+      typeofWork
+      typeOfIndustry
+    }
+  }
+`;
+
+export async function getStaticProps() {
+  const { works } = await graphcms.request(QUERY);
+  return {
+    props: {
+      works,
+    },
+  };
+}
+
+export default function Home(works) {
   return (
     <>
       <Layout>
         <Hero />
-        <Work />
+        <Work works={works.works} />
         <Clients />
         <Form />
       </Layout>
