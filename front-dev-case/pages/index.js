@@ -1,7 +1,7 @@
 import Layout from "../components/layout";
 import Hero from "../components/hero/Hero";
 import Clients from "../components/clients/clients";
-import Form from "../components/form/Form";
+import Form from "../components/form/form";
 import Work from "../components/work/work";
 import { GraphQLClient, gql } from "graphql-request";
 

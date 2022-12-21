@@ -1,7 +1,6 @@
 import styles from "./work.module.scss";
 import ClientCard from "./clientcard/clientcard";
 import { v4 as uuidv4 } from "uuid";
-import Quote from "../quote/Quote";
 import React from "react";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 
