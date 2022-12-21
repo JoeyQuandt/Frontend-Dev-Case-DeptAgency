@@ -1,5 +1,6 @@
 ## Dept frontend case
 
+![Alt Text](https://im3.ezgif.com/tmp/ezgif-3-0e105e158a.gif)
 [Demo vercel](https://frontend-dev-case-dept-agency-8eer.vercel.app/)
 
 ## Build with
