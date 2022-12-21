@@ -122,14 +122,17 @@
         }
     }
     .Readmore{
+        display: block;
         display: flex;
         align-items: center;
-        font-size: 1.1em;
+        img{
+            margin-top: -3.5px;
+        }
     }
 }
 
 /*Desktop*/
-@media  screen and (min-width:1280px) {
+@media  screen and (min-width:1430px) {
     .ClientCardNote{
         max-width: 476px;
     }

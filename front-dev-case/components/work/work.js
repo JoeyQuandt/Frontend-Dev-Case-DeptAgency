@@ -1,6 +1,7 @@
 import styles from "./work.module.scss";
 import ClientCard from "./clientcard/clientcard";
 import { v4 as uuidv4 } from "uuid";
+import Quote from "../quote/quote";
 import React from "react";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 
@@ -26,6 +27,8 @@ export default function Work(props) {
       />
     );
   });
+  //Add quote to workelements
+  workElements.splice(12, 0, <Quote key={uuidv4()} />);
 
   /*handle form change*/
   function handleChange(event) {

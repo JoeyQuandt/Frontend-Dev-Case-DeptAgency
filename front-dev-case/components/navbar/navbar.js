@@ -1,12 +1,13 @@
 import { v4 as uuidv4 } from "uuid";
 import styles from "./navbar.module.scss";
-import { motion } from "framer-motion";
+import { useInView, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export default function Navbar() {
   const [menuShown, setMenuShow] = React.useState(false);
+
   /*Links menu navbar*/
   const Links = [
     "home",
