@@ -14,7 +14,6 @@
 .menuShow{
     z-index: 5;
     position: relative;
-    display: none;
     @include position(absolute, $top: 0, $left: 0, $bottom: 0);
     background: $light_black;
     min-height: 100vh;
@@ -46,6 +45,9 @@
             font-size: $menu;
             padding-bottom: em(5);
             text-align: right;
+        }
+        a:hover{
+            color: $light_gray;
         }
         .countrieLinks{
             display: none;
@@ -112,17 +114,12 @@
             gap: em(45);
             align-items: center;
             a{
+                cursor: pointer;
                 display: block;
                 color: $white;
                 font-size: $uppercase;
                 text-decoration: none;
                 text-transform: uppercase;
-            }
-            a:hover{
-                transition: all 0.3s ease;
-                text-decoration: underline;
-                text-underline-offset: 0.25em;
-                text-decoration-thickness: 0.075em;
             }
         }
         button{

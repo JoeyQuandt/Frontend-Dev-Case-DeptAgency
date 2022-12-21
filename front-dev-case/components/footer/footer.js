@@ -12,10 +12,9 @@ export default function Footer() {
     "contact",
   ];
 
-
   const navElements = navLinks.map((link) => {
     return (
-      <Link href="/" key={navLinks.indexOf(link)}>
+      <Link className="link link--bar" href="/" key={navLinks.indexOf(link)}>
         {link}
       </Link>
     );
@@ -69,7 +68,7 @@ export default function Footer() {
           <p className={styles.copyRight}>© 2022 Dept Agency</p>
         </div>
       </section>
-      <div className={styles.topArrow}>
+      <a href="#hero" className={styles.topArrow}>
         <Image
           priority
           src="/images/arrow.svg"
@@ -78,7 +77,7 @@ export default function Footer() {
           height={36}
         />
         <p>Top</p>
-      </div>
+      </a>
     </footer>
   );
 }

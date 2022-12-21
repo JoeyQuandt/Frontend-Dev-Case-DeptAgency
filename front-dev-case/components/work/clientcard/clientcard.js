@@ -1,4 +1,5 @@
 import styles from "./clientcard.module.scss";
+import { v4 as uuidv4 } from "uuid";
 import Image from "next/image";
 import Article from "./article";
 
@@ -20,12 +21,7 @@ export default function ClientCard(props) {
           <p>{props.subject}</p>
           <h2>{props.tagLine}</h2>
           <a href="/" className={styles.Readmore}>
-            <Image
-              src="/images/readmore.svg"
-              height={25}
-              width={25}
-              alt="readmore"
-            />
+            <img src="/images/readmore.svg" alt="readmore" />
             Read more
           </a>
         </div>
@@ -36,6 +32,7 @@ export default function ClientCard(props) {
             <Article
               title={highlight.title}
               description={highlight.description}
+              key={uuidv4()}
             />
           );
         })}
@@ -45,7 +42,7 @@ export default function ClientCard(props) {
     <div className={styles.Clientcard}>
       <Image
         src={props.thumbnail}
-        alt="idk"
+        alt="thumbnail"
         width={720}
         height={568}
         quality={100}
@@ -54,7 +51,7 @@ export default function ClientCard(props) {
         <p>{props.subject}</p>
         <h2>{props.tagLine}</h2>
         <a href="/" className={styles.Readmore}>
-          <Image src="/images/readmore.svg" height={25} width={25} />
+          <img src="/images/readmore.svg" alt="readmore" />
           Read more
         </a>
       </div>

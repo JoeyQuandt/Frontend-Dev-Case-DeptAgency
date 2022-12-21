@@ -1,11 +1,10 @@
-import Link from "next/link";
 import Layout from "../components/layout";
+import ErrorContent from "../components/404/errorContent";
 
 export default function FourourFour() {
   return (
     <Layout>
-      <h1>Hello world</h1>
-      <Link href="/">Home</Link>
+      <ErrorContent />
     </Layout>
   );
 }

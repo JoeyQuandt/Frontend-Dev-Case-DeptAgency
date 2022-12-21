@@ -1,8 +1,9 @@
 import Styles from "./hero.module.scss";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className={Styles.hero}>
+    <section id="hero" className={Styles.hero}>
       <div className={Styles.heroText}>
         <p>Work</p>
         <h1>

@@ -13,6 +13,7 @@
 
 html{
   height: -webkit-fill-available;
+  scroll-behavior: smooth;
 }
 
 body{
@@ -38,4 +39,41 @@ button{
   text-transform: uppercase;
   border: none;
   background: transparent;
+}
+
+
+.link {
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.link::before,
+.link::after {
+  position: absolute;
+  width: 100%;
+  background: white;
+  height: 1px;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+
+.link::before {
+  content: '';
+  /* show by default */
+}
+
+
+
+.link--bar::before {
+  transform-origin: 100% 50%;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.3s;
+}
+
+.link--bar:hover::before {
+  transform-origin: 0% 50%;
+  transform: scale3d(1, 1, 1);
 }

@@ -1,5 +1,5 @@
 import styles from "./clients.module.scss";
-import Image from "next/image";
+import { v4 as uuidv4 } from "uuid";
 
 export default function Clients() {
   const Companies = [
@@ -19,7 +19,14 @@ export default function Clients() {
 
   const CompaniesImages = Companies.map((company) => {
     const logo = `/images/companies/${company}.svg`;
-    return <img className={styles.companyLogo} src={logo} alt="Logo" />;
+    return (
+      <img
+        className={styles.companyLogo}
+        src={logo}
+        alt="Logo"
+        key={uuidv4()}
+      />
+    );
   });
 
   return (

@@ -40,13 +40,11 @@ export async function getStaticProps() {
 
 export default function Home(works) {
   return (
-    <>
-      <Layout>
-        <Hero />
-        <Work works={works.works} />
-        <Clients />
-        <Form />
-      </Layout>
-    </>
+    <Layout>
+      <Hero />
+      <Work works={works.works} />
+      <Clients />
+      <Form />
+    </Layout>
   );
 }

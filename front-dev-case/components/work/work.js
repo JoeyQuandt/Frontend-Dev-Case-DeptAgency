@@ -1,5 +1,6 @@
 import styles from "./work.module.scss";
 import ClientCard from "./clientcard/clientcard";
+import { v4 as uuidv4 } from "uuid";
 import Quote from "../quote/Quote";
 import React from "react";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
@@ -22,6 +23,7 @@ export default function Work(props) {
         tagLine={work.tagline}
         highlight={work.highlight}
         news={work.highlights}
+        key={uuidv4()}
       />
     );
   });
@@ -41,7 +43,7 @@ export default function Work(props) {
     <section className={styles.work}>
       <div className={styles.workSelection}>
         <div className={styles.industryTypeSelect}>
-          <label for="industry">in</label>
+          <label htmlFor="industry">in</label>
           <select
             id="industry"
             name="industry"
@@ -56,7 +58,7 @@ export default function Work(props) {
           </select>
         </div>
         <div className={styles.workTypeSelect}>
-          <label for="work">Show me</label>
+          <label htmlFor="work">Show me</label>
           <select
             id="work"
             name="work"
@@ -77,7 +79,11 @@ export default function Work(props) {
         (formData.work == "all" && formData.industry === "all")
           ? workElements
           : workArray
-              .filter((work) => work.typeofWork === formData.work)
+              .filter(
+                (work) =>
+                  work.typeofWork === formData.work ||
+                  work.typeOfIndustry === formData.industry
+              )
               .map((work) => {
                 return (
                   <ClientCard
@@ -86,6 +92,7 @@ export default function Work(props) {
                     tagLine={work.tagline}
                     highlight={work.highlight}
                     news={work.highlights}
+                    key={uuidv4()}
                   />
                 );
               })}
