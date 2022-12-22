@@ -1,6 +1,7 @@
 ## Dept frontend case
 
 ![](case.gif)
+For this assignment, I have chosen to use next.js instead of vite or cra for page routing and static site generation. For styling, I have used sass with styled modules. For the image grid used a Graphql api call to display the thumbnails and titles.
 [Demo vercel](https://frontend-dev-case-dept-agency-8eer.vercel.app/)
 
 ## Build with
@@ -16,12 +17,11 @@
 Installation:
 
 ```bash
-# clone repository
-$ git clone https://github.com/JoeyQuandt/Frontend-Dev-Case-DeptAgency.git && cd front-dev-case
-
+# select folder
+$ cd front-dev-case
 # install dependencies
 $ npm install
-
+#  development server
 $ npm run dev
 ```
 
