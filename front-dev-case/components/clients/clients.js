@@ -1,22 +1,8 @@
 import styles from "./clients.module.scss";
 import { v4 as uuidv4 } from "uuid";
+import { Companies } from "../utilis";
 
 export default function Clients() {
-  const Companies = [
-    "google",
-    "levis",
-    "spotify",
-    "patagonia",
-    "adyen",
-    "audi",
-    "tesla",
-    "asos",
-    "triumph",
-    "netflix",
-    "takeaway",
-    "fujitsu",
-  ];
-
   const CompaniesImages = Companies.map((company) => {
     const logo = `/images/companies/${company}.svg`;
     return (

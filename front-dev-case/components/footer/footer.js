@@ -1,24 +1,8 @@
 import styles from "./footer.module.scss";
 import Image from "next/image";
-import Link from "next/link";
+import { navLinks, MapLinks } from "../utilis";
 
 export default function Footer() {
-  const navLinks = [
-    "work",
-    "services",
-    "stories",
-    "about",
-    "careers",
-    "contact",
-  ];
-
-  const navElements = navLinks.map((link) => {
-    return (
-      <Link className="link link--bar" href="/" key={navLinks.indexOf(link)}>
-        {link}
-      </Link>
-    );
-  });
   return (
     <footer className={styles.footerSection}>
       <section className={styles.footer}>
@@ -32,7 +16,7 @@ export default function Footer() {
               width={88}
               height={25}
             />
-            {navElements}
+            {MapLinks(navLinks)}
           </div>
           <div className={styles.footerSocials}>
             <Image

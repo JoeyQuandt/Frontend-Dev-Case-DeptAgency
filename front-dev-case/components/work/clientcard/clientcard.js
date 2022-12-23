@@ -1,25 +1,8 @@
 import styles from "./clientcard.module.scss";
-import { v4 as uuidv4 } from "uuid";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Article from "./article";
-
-function FadeInWhenVisible({ children }) {
-  return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      transition={{ duration: 0.75 }}
-      variants={{
-        visible: { opacity: 1 },
-        hidden: { opacity: 0 },
-      }}
-    >
-      {children}
-    </motion.div>
-  );
-}
+import { v4 as uuidv4 } from "uuid";
+import { FadeInWhenVisible } from "../../utilis";
 
 export default function ClientCard(props) {
   return props.highlight ? (

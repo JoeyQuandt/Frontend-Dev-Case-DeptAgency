@@ -1,9 +1,9 @@
+import React from "react";
 import styles from "./work.module.scss";
 import ClientCard from "./clientcard/clientcard";
-import { v4 as uuidv4 } from "uuid";
 import Quote from "../quote/quote";
-import React from "react";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
+import { v4 as uuidv4 } from "uuid";
 
 export default function Work(props) {
   /*Form*/
@@ -78,7 +78,7 @@ export default function Work(props) {
       </div>
       <div className={styles.workGrid} ref={animationParent}>
         {!formData.work ||
-        (formData.work == "all" && formData.industry === "all")
+        (formData.work === "all" && formData.industry === "all")
           ? workElements
           : workArray
               .filter(
