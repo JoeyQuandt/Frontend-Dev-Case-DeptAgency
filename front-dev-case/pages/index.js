@@ -24,7 +24,6 @@ const QUERY = gql`
         description
       }
       typeofWork
-      typeOfIndustry
     }
   }
 `;

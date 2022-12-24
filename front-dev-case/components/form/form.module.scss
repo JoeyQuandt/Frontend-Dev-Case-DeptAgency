@@ -41,11 +41,11 @@
             text-transform: uppercase;
             border-radius: 50px;
             font-size: $uppercase;
-            border: 1px solid #121212;
+            border: 1px solid $purple;
             cursor: pointer;
             text-align: center;
             padding: 1em;
-            color: $black;
+            color: $purple;
             width: 100%;
         }
     }
@@ -71,6 +71,8 @@
             }
             button{
                 max-width: 167px;
+                border: 1px solid $black;
+                color: $black;
             }
 
         }

@@ -67,9 +67,9 @@
         display: block;
         background: white;
         width: 100%;
-        padding: 0.0625em;
+        padding: 0.0125em;
         margin-top: 2.25em;
-        margin-bottom: 1em;
+        margin-bottom: 2em;
     }
     h2{
         font-size: $paragraph;
@@ -86,7 +86,6 @@
     .Clientcard{
         img{
             object-fit: fill;
-            height: auto;
         }
         .ClientcardText{
             padding-bottom: 2em;
@@ -108,7 +107,9 @@
         }
     }
     .ClientCardNote{
+        display: flex;
         width: 100%;
+        justify-content: center;
         padding: 3.75em 2em;
         .ClientCardArticle:nth-child(3){
             display: block;

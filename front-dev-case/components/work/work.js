@@ -45,18 +45,19 @@ export default function Work(props) {
     <section className={styles.work}>
       <div className={styles.workSelection}>
         <div className={styles.industryTypeSelect}>
-          <label htmlFor="industry">in</label>
+          <label htmlFor="work">in</label>
           <select
-            id="industry"
-            name="industry"
-            value={formData.industry}
+            id="work"
+            name="work"
+            value={formData.work}
             onChange={handleChange}
           >
             <option value="all">all industries</option>
-            <option value="Marketing">Marketing</option>
-            <option value="E-commerce">E-commerce</option>
-            <option value="Web3">Web3</option>
-            <option value="ICT">ICT</option>
+            <option value="Retail">Retail</option>
+            <option value="Strategy">Strategy</option>
+            <option value="Travel">Travel</option>
+            <option value="Culture">Culture</option>
+            <option value="Finance">Finance</option>
           </select>
         </div>
         <div className={styles.workTypeSelect}>
@@ -77,15 +78,10 @@ export default function Work(props) {
         </div>
       </div>
       <div className={styles.workGrid} ref={animationParent}>
-        {!formData.work ||
-        (formData.work === "all" && formData.industry === "all")
+        {!formData.work || formData.work === "all"
           ? workElements
           : workArray
-              .filter(
-                (work) =>
-                  work.typeofWork === formData.work ||
-                  work.typeOfIndustry === formData.industry
-              )
+              .filter((work) => work.typeofWork === formData.work)
               .map((work) => {
                 return (
                   <ClientCard
